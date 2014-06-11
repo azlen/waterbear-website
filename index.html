@@ -1,0 +1,215 @@
+<html>
+<head>
+	<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,700,600,300' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Merriweather:300,300italic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,700' rel='stylesheet' type='text/css'>
+	<style>
+		html, body{
+			margin:0px;
+			padding:0px;
+			background-color:#eee;
+			width:100%;
+			font-family: "Times New Roman";
+		}
+		*::selection{
+			background:#0af;
+			color:#fff;
+		}
+		section{
+			min-height: 100px;
+		}
+		.s1{
+			width:100%;
+			background:#333;
+			font-family: "Titillium Web";
+			color:#fff;
+			padding:10px 50px;
+			font-size: 25px;
+			box-sizing:border-box;
+		}
+		.s2{
+			display:flex;
+			flex-align:center;
+			align-items:center;
+			height:550px;
+		}
+		.s2 > div{
+			display:flex;
+			width:100%;
+		}
+		.s2 .s2-2.steampunk{
+			flex:1000;
+			-moz-transform: scaleX(-1);
+	        -o-transform: scaleX(-1);
+	        -webkit-transform: scaleX(-1);
+	        transform: scaleX(-1);
+	        filter: FlipH;
+	        -ms-filter: "FlipH";
+	        min-width:200px;
+	        max-width:300px;
+		}
+		.s2 .s2-1{
+			flex:1 0 0;
+			max-width: 400px;
+			min-width: 10px;
+		}
+		.s2 .s2-3{
+			flex:1;
+			max-width: 325px;
+			min-width: 325px;
+			padding-left: 50px;
+			display:flex;
+			flex-align:center;
+			align-items:center;
+		}
+		.s2 .s2-3 h1{
+			font-family: "Titillium Web";
+			color:#09f;
+			font-size: 50px;
+			margin:0px;
+		}
+		.s2 .s2-3 h2{
+			font-family: "Merriweather";
+			font-style: italic;
+			font-size: 25px;
+			margin:0px;
+		}
+		.s2 .s2-3 p{color:#999}
+		.s2 .s2-3 button{
+			background:transparent;
+			outline:none;
+			border:2px solid #222;
+			font-size: 20px;
+			font-family: "Titillium Web";
+			padding:5px 20px;
+			transition:color .3s ease, border-color .3s ease, border-bottom-right-radius .1s ease-in .2s, border-top-right-radius .1s ease-in .2s;
+			cursor:pointer;
+			position: relative;
+			border-radius: 10px;
+		}
+		.s2 .s2-3 button:before{
+			content: "";
+			position: absolute;
+			width: 0; 
+			height: 0; 
+			top: -2px;
+			left:100%;
+			border-top: 22.5px solid transparent;
+			border-bottom: 22.5px solid transparent;
+			border-left: 0px solid #000;
+			transition:border .3s ease;
+		}
+		.s2 .s2-3 button:after{
+			content: "";
+			position: absolute;
+			width: 0; 
+			height: 0; 
+			top: 0;
+			left:100%;
+			margin-left: 0px;
+			border-top: 20.5px solid transparent;
+			border-bottom: 20.5px solid transparent;
+			border-left: 0px solid #999;
+			transition:border .3s ease;
+		}
+		.s2 .s2-3 button:hover::before{
+			border-left-width:22.5px;
+			border-left-color:#09f;
+		}
+		.s2 .s2-3 button:hover::after{
+			border-left-width:20.5px;
+			border-left-color:#eee;
+		}
+		.s2 .s2-3 button:hover{
+			color:#09f;
+			border-color:#09f;
+			border-right:none;
+			border-bottom-right-radius: 0px;
+			border-top-right-radius: 0px;
+			transition:color .3s ease, border-color .3s ease, border-bottom-right-radius 0s ease 0s, border-top-left-radius 0s ease 0s;
+		}
+		.s2 .s2-4{
+			flex:1 0 0;
+			min-width: 100px;
+			display:flex;
+			flex-align:center;
+			align-items:center;
+		}
+		.s2 .s2-4 ul{
+			padding:0px;
+			margin-left:auto;
+			display:inline-block;
+		}
+		.s2 .s2-4 ul li{
+			list-style: none;
+			width:15px;
+			height:15px;
+			background:#222;
+			margin:15px 30px;
+			border-radius: 50%;
+			cursor:pointer;
+			box-shadow:inset 0px 0px 0px 8px #222;
+			transition:box-shadow .3s ease, background .5s ease;
+		}
+		.s2 .s2-4 ul li:hover{
+			box-shadow:inset 0px 0px 0px 8px #09f;
+			background:#09f;
+		}
+		.s2 .s2-4 ul li.checked{
+			background:none;
+			box-shadow:inset 0px 0px 0px 2px #222;
+		}
+
+		.s3{
+			background:#ccc;
+		}
+		.s4{
+			background:#333;
+		}
+		.s5{
+			background:#09f;
+		}
+		.s6{
+			background:#fff;
+			box-shadow:0px 0px 20px rgba(0,0,0,0.4);
+		}
+	</style>
+</head>
+<body>
+	<header class="s1">waterbear</header>
+	<section class="s2">
+		<div>
+			<div class="s2-1"></div>
+			<img class="s2-2 steampunk" src="steampunk.png" width="200px"></img>
+			<div class="s2-3">
+				<div>
+					<h2>The</h2>
+					<h1>WATERBEAR</h1>
+					<h2>welcomes you!</h2>
+					<p>Waterbear is a toolkit for making programming more accessible and fun. Having a visual language means you don't have to focus on learning a syntax to start programming.</p>
+					<button>Try it out</button>
+				</div>
+			</div>
+			<div class="s2-4">
+				<ul>
+					<li onclick="s2_4li_click(this)" class="checked"></li>
+					<li onclick="s2_4li_click(this)"></li>
+					<li onclick="s2_4li_click(this)"></li>
+					<li onclick="s2_4li_click(this)"></li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<section class="s3"></section>
+	<section class="s4"></section>
+	<section class="s5"></section>
+	<section class="s6"></section>
+
+	<script>
+		function s2_4li_click(e){
+			document.querySelector('.checked').classList.remove('checked');
+			e.classList.add('checked');
+		}
+	</script>
+</body>
+</html>

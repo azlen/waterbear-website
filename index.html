@@ -2,14 +2,14 @@
 <head>
 	<link href='//fonts.googleapis.com/css?family=Titillium+Web:400,700,600,300' rel='stylesheet' type='text/css'>
 	<link href='//fonts.googleapis.com/css?family=Merriweather:300,300italic' rel='stylesheet' type='text/css'>
-	<link href='//fonts.googleapis.com/css?family=Crimson+Text:400,400italic,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 	<style>
 		html, body{
 			margin:0px;
 			padding:0px;
-			background-color:#eee;
+			background-color:#f9f9f9;
 			width:100%;
-			font-family: "Times New Roman";
+			font-family: "Open Sans";
 		}
 		*::selection{
 			background:#0af;
@@ -21,7 +21,7 @@
 		.s1{
 			width:100%;
 			background:#333;
-			font-family: "Titillium Web";
+			font-family: "Titillium Web", sans-serif;
 			color:#fff;
 			padding:10px 50px;
 			font-size: 25px;
@@ -63,13 +63,13 @@
 			align-items:center;
 		}
 		.s2 .s2-3 h1{
-			font-family: "Titillium Web";
+			font-family: "Titillium Web", sans-serif;
 			color:#09f;
 			font-size: 50px;
 			margin:0px;
 		}
 		.s2 .s2-3 h2{
-			font-family: "Merriweather";
+			font-family: "Merriweather", sans-serif;
 			font-style: italic;
 			font-size: 25px;
 			margin:0px;
@@ -80,12 +80,11 @@
 			outline:none;
 			border:2px solid #222;
 			font-size: 20px;
-			font-family: "Titillium Web";
+			font-family: "Titillium Web", sans-serif;
 			padding:5px 20px;
-			transition:color .3s ease, border-color .3s ease, border-bottom-right-radius .1s ease-in .2s, border-top-right-radius .1s ease-in .2s;
+			transition:color .3s ease, border-color .3s ease;
 			cursor:pointer;
 			position: relative;
-			border-radius: 10px;
 		}
 		.s2 .s2-3 button:before{
 			content: "";
@@ -118,15 +117,13 @@
 		}
 		.s2 .s2-3 button:hover::after{
 			border-left-width:20.5px;
-			border-left-color:#eee;
+			border-left-color:#f9f9f9;
 		}
 		.s2 .s2-3 button:hover{
 			color:#09f;
 			border-color:#09f;
 			border-right:none;
-			border-bottom-right-radius: 0px;
-			border-top-right-radius: 0px;
-			transition:color .3s ease, border-color .3s ease, border-bottom-right-radius 0s ease 0s, border-top-left-radius 0s ease 0s;
+			transition:color .3s ease, border-color .3s ease;
 		}
 		.s2 .s2-4{
 			flex:1 0 0;
@@ -161,13 +158,44 @@
 		}
 
 		.s3{
-			background:#ccc;
+			background:#eee;
+			display:flex;
+		}
+		.s3 > div{
+			flex:1;
+			min-width: 400px;
+			margin:50px;
+			display:flex;
+		}
+		.s3 > div > div{
+			flex:1;
+			text-align: left;
+			color:#777;
+			padding:0px 20px;
+		}
+		.s3 > div > div .circle{
+			width:150px;
+			height:150px;
+			background-color:#fff;
+			border-radius: 50%;
+			margin:auto;
+		}
+		.s3 > div > div h2{
+			font-family: "Titillium Web", sans-serif;
+			color:#09f;
+			text-align: center;
 		}
 		.s4{
 			background:#333;
 		}
 		.s5{
 			background:#09f;
+			color:#fff;
+			padding:50px;
+		}
+		.s5 h2{
+			color:#000;
+			font-family: "Titillium Web", sans-serif;
 		}
 		.s6{
 			background:#fff;
@@ -200,9 +228,43 @@
 			</div>
 		</div>
 	</section>
-	<section class="s3"></section>
+	<section class="s3">
+		<div>
+			<div class="s3-1">
+				<div class="circle"></div>
+				<h2>Community</h2>
+				<p>Nullam tempor justo eget ornare imerdiet. Proin id est aliquam, egestas dui ut, ullamcorper nisi. Proin feugiat tortor sed metus condimenturn, a varius mauris egestas. Praesent rutrum mauris facilisis ligula placerat, quis congue risus auctor. Nullam euismod elementum dapibus. Etiam vitae pulvinar purus. Nunc sagittis et turpis</p>
+			</div>
+			<div class="s3-2">
+				<div class="circle"></div>
+				<h2>Same Step</h2>
+				<p>Our blocks are heavily inspired by MIT's Scratch language, but the goal is not to slavishly duplicate Scratch, or to create a programming language, but to create a visual suntax tool that can be used with a variety of languages and projects, and to make it as widely available as possible. Waterbear runs in a variety of web browsers, including Mobile Safari on the iPad</p>
+			</div>
+			<div class="s3-3">
+				<div class="circle"></div>
+				<h2>The Reason Why</h2>
+				<p>Waterbears, also known as tardigrades, or moss piglets, are probably the most resilient creatures on Earth, able to survive extremes of heat and cold, pressure (high pressure and the vacuum of space), dehydration, radiation, environmental toxins. Since we want to be able to create code that is robust, they are an appropriate mascot. Also, they are cute.<br><i>[mostly via Wikipedia]</i></p>
+			</div>
+			<div class="s3-4">
+				<div class="circle"></div>
+				<h2>Fork us</h2>
+				<p>Our Waterbear is beta software and under active development as we work to improve the interface, organize the blocks, and build curriculum around it. Fork us on Github and help us to make Waterbear even better!</p>
+			</div>
+		</div>
+	</section>
 	<section class="s4"></section>
-	<section class="s5"></section>
+	<section class="s5">
+		<h2>Credits and our Special Thanks to,</h2>
+		<ul>
+			<li><b>Dethe Elza</b> founded the project and named it.</li>
+			<li><b>Dethe's kids</b>, for helping test so many programming environments and great critics (and for first Waterbear mascot design).</li>
+			<li><b>Martyn Eggleton</b>, for the Arduino blocks, good brainstorming, and using Waterbear to teach programming.</li>
+			<li><b>Blake Bourque</b>, for Java blocks, troubleshooting, documentation and code contributions.</li>
+			<li><b>Christopher de Beer</b>, for suggestions and bug fixes.</li>
+			<li><b>Steve Dekorte, Alex Payne, Bob Nystrom, Wolf Rentzsch, Victoria Wang</b>, and <b>Brian Leroux</b> for the encouragement to make this real.</li>
+			<li><b>Everyone who worked on Scratch</b>, the primary source of inspiration for this project.</li>
+		</ul>
+	</section>
 	<section class="s6"></section>
 
 	<script>
